@@ -3,24 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:orientation="horizontal"
+        android:background="@drawable/uptool">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Food:"
-            android:textSize="28dp" />
+            />
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
             android:maxLines="1"
             android:textColor="@color/expense"
             android:gravity="center"
@@ -28,20 +32,20 @@
             android:id="@+id/food_stat"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="4"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Transportation:"
-            android:textSize="28dp" />
+            />
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
             android:maxLines="1"
             android:textColor="@color/expense"
             android:gravity="center"
@@ -49,20 +53,20 @@
             android:id="@+id/transp_stat"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="4"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Entertainment:"
-            android:textSize="28dp" />
+            />
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
             android:maxLines="1"
             android:textColor="@color/expense"
             android:gravity="center"
@@ -70,41 +74,47 @@
             android:id="@+id/entertainment_stat"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="2"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="Health:"
-            android:textSize="28dp" />
-        <TextView
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
+            android:gravity="center"
+            android:text="Health:" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:maxLines="1"
             android:textColor="@color/expense"
             android:gravity="center"
             tools:text="230"
             android:id="@+id/health_stat"/>
     </LinearLayout>
+    </LinearLayout>
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:orientation="horizontal"
+        android:background="@drawable/uptool">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Apparel:"
-            android:textSize="28dp" />
+             />
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
             android:maxLines="1"
             android:textColor="@color/expense"
             android:gravity="center"
@@ -112,20 +122,20 @@
             android:id="@+id/apparel_stat"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="2"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Household:"
-            android:textSize="28dp" />
+            />
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
             android:maxLines="1"
             android:textColor="@color/expense"
             android:gravity="center"
@@ -133,47 +143,51 @@
             android:id="@+id/house_stat"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="2"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="Other:"
-            android:textSize="28dp" />
-        <TextView
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
+            android:gravity="center"
+            android:text="Other:" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:maxLines="1"
             android:textColor="@color/expense"
             android:gravity="center"
             tools:text="230"
             android:id="@+id/other_stat"/>
     </LinearLayout>
+    </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:orientation="vertical"
+        android:background="@drawable/uptool">
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="Total:"
-            android:textSize="28dp" />
-        <TextView
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="28dp"
+            android:gravity="center"
+            android:text="Total:" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:maxLines="1"
             android:textColor="@color/expense"
             android:gravity="center"
             tools:text="230"
             android:id="@+id/total_stat"/>
     </LinearLayout>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pie_chart"></com.github.mikephil.charting.charts.PieChart>
 
 
 

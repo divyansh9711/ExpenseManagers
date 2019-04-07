@@ -102,4 +102,12 @@
         android:layout_centerInParent="true"
         android:id="@+id/split"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Amount"
+        android:layout_centerInParent="true"
+        android:id="@+id/blank_text"
+        android:visibility="gone"/>
+
 </RelativeLayout>

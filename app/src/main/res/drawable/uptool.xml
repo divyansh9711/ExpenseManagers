@@ -20,11 +20,9 @@
         </shape>
     </item>
 
-    <!-- Background -->
-
     <item>
         <shape>
-            <solid android:color="#fff" />
+            <solid android:color="#FAFAFA" />
         </shape>
     </item>
 </layer-list>

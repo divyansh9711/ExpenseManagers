@@ -5,4 +5,13 @@
     <color name="colorAccent">#ff5f52</color>
     <color name="expense">#D50000</color>
     <color name="income">#0091EA</color>
+
+    <color name="Green">#aaf255</color>
+    <color name="Blue">#d4bff9</color>
+    <color name="purple">#f2bcf8</color>
+    <color name="orange">#ffc77d</color>
+    <color name="yellow">#FFF59D</color>
+    <color name="brown">#D7CCC8</color>
+
+
 </resources>

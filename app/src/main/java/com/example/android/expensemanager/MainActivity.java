@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements ListItemAdapter.O
     private ArrayList<ExpenseItem> eItems;
     int expense,income,total,food,transp,entert,health,apparel,household,other,stotal;
     private Button mSplit;
+    private TextView mBlank;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements ListItemAdapter.O
         mExpense = findViewById(R.id.expenses_tool);
         mSplit = findViewById(R.id.split);
         mTotal = findViewById(R.id.total_tool);
+        mBlank=findViewById(R.id.blank_text);
         setExpense();
         listItemAdapter = new ListItemAdapter(MainActivity.this,eItems,this);
         ConnectivityManager connMgr = (ConnectivityManager)
@@ -123,8 +125,7 @@ public class MainActivity extends AppCompatActivity implements ListItemAdapter.O
                             AuthUI.getInstance()
                                     .createSignInIntentBuilder()
                                     .setAvailableProviders(Arrays.asList(
-                                            new AuthUI.IdpConfig.EmailBuilder().build(),
-                                            new AuthUI.IdpConfig.GoogleBuilder().build()))
+                                            new AuthUI.IdpConfig.EmailBuilder().build()))
                                     .build(),
                             RC_SIGN_IN);
                 }
@@ -198,6 +199,14 @@ public class MainActivity extends AppCompatActivity implements ListItemAdapter.O
                 mMessageListView.setLayoutManager(new LinearLayoutManager(MainActivity.this,1,false));
                 mMessageListView.setAdapter(listItemAdapter);
                 mProgressbar.setVisibility(View.GONE);
+
+                if(listItemAdapter.getItemCount()==0){
+                    mBlank.setVisibility(View.VISIBLE);
+                }
+                else {
+                    mBlank.setVisibility(View.GONE);
+                }
+
             }
 
             @Override

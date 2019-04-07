@@ -7,6 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -17,14 +22,20 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class StatActivity extends AppCompatActivity {
 
     private TextView mFood,mTransp,mEntert,mHealth,mApparel,mHousehold,mTotal,mOther;
+    PieChart mPiechart;
+    private float f,t,e,h,a,g,o;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
+
+        f=0;t=0;e=0;h=0;a=0;g=0;o=0;
 
         Intent i = getIntent();
 
@@ -37,6 +48,14 @@ public class StatActivity extends AppCompatActivity {
         String other = Integer.toString(i.getIntExtra("other",0));
         String total = Integer.toString(i.getIntExtra("total",0));
 
+        f = i.getIntExtra("food",0);
+        t = i.getIntExtra("transp",0);
+        e = i.getIntExtra("entert",0);
+        h = i.getIntExtra("health",0);
+        a = i.getIntExtra("apparel",0);
+        g = i.getIntExtra("house",0);
+        o = i.getIntExtra("other",0);
+
         mFood = findViewById(R.id.food_stat);
         mTransp = findViewById(R.id.transp_stat);
         mEntert = findViewById(R.id.entertainment_stat);
@@ -45,6 +64,13 @@ public class StatActivity extends AppCompatActivity {
         mHousehold = findViewById(R.id.house_stat);
         mOther = findViewById(R.id.other_stat);
         mTotal = findViewById(R.id.total_stat);
+        mPiechart = findViewById(R.id.pie_chart);
+
+        mPiechart.setRotationEnabled(true);
+        mPiechart.setHoleRadius(50);
+        mPiechart.setCenterText("Money Spent on");
+        mPiechart.setCenterTextSize(10);
+
 
         mFood.setText(food);
         mTransp.setText(transp);
@@ -55,5 +81,31 @@ public class StatActivity extends AppCompatActivity {
         mOther.setText(other);
         mTotal.setText(total);
 
+        ArrayList<PieEntry> entry = new ArrayList<>();
+
+        entry.add(new PieEntry(f,"Food"));
+        entry.add(new PieEntry(t,"Transportation"));
+        entry.add(new PieEntry(e,"Entertainment"));
+        entry.add(new PieEntry(h,"Health"));
+        entry.add(new PieEntry(a,"Apparel"));
+        entry.add(new PieEntry(g,"Household"));
+        entry.add(new PieEntry(o,"Other"));
+
+        PieDataSet set = new PieDataSet(entry, "Money Spent On");
+        PieData data = new PieData(set);
+        set.setSliceSpace(2);
+        set.setValueTextSize(0);
+
+
+        set.setColors(new int[]{R.color.expense,R.color.Green,R.color.Blue,R.color.purple,R.color.brown,R.color.orange,R.color.yellow});
+        mPiechart.setData(data);
+        mPiechart.invalidate();
+
+        Legend legend = mPiechart.getLegend();
+        legend.setForm(Legend.LegendForm.CIRCLE);
+        legend.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
+
     }
+
+
 }
