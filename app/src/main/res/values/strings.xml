@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Expense Manager</string>
+    <string-array name="categories">
+        <item>Food</item>
+        <item>Transportation</item>
+        <item>Entertainment</item>
+        <item>Health</item>
+        <item>Apparel</item>
+        <item>Household</item>
+        <item>Other</item>
+    </string-array>
+    <string name="FIREBASE_URL">"https://expense-manager-e9bd3.firebaseio.com/"</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

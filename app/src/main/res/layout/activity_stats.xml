@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Food:"
+            android:textSize="28dp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:maxLines="1"
+            android:textColor="@color/expense"
+            android:gravity="center"
+            tools:text="230"
+            android:id="@+id/food_stat"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Transportation:"
+            android:textSize="28dp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:maxLines="1"
+            android:textColor="@color/expense"
+            android:gravity="center"
+            tools:text="230"
+            android:id="@+id/transp_stat"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Entertainment:"
+            android:textSize="28dp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:maxLines="1"
+            android:textColor="@color/expense"
+            android:gravity="center"
+            tools:text="230"
+            android:id="@+id/entertainment_stat"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Health:"
+            android:textSize="28dp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:maxLines="1"
+            android:textColor="@color/expense"
+            android:gravity="center"
+            tools:text="230"
+            android:id="@+id/health_stat"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Apparel:"
+            android:textSize="28dp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:maxLines="1"
+            android:textColor="@color/expense"
+            android:gravity="center"
+            tools:text="230"
+            android:id="@+id/apparel_stat"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Household:"
+            android:textSize="28dp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:maxLines="1"
+            android:textColor="@color/expense"
+            android:gravity="center"
+            tools:text="230"
+            android:id="@+id/house_stat"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Other:"
+            android:textSize="28dp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:maxLines="1"
+            android:textColor="@color/expense"
+            android:gravity="center"
+            tools:text="230"
+            android:id="@+id/other_stat"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Total:"
+            android:textSize="28dp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:maxLines="1"
+            android:textColor="@color/expense"
+            android:gravity="center"
+            tools:text="230"
+            android:id="@+id/total_stat"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
