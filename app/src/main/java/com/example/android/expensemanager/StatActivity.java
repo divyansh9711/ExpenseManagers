@@ -71,7 +71,6 @@ public class StatActivity extends AppCompatActivity {
         mPiechart.setCenterText("Money Spent on");
         mPiechart.setCenterTextSize(10);
 
-
         mFood.setText(food);
         mTransp.setText(transp);
         mEntert.setText(entert);
@@ -83,19 +82,25 @@ public class StatActivity extends AppCompatActivity {
 
         ArrayList<PieEntry> entry = new ArrayList<>();
 
-        entry.add(new PieEntry(f,"Food"));
-        entry.add(new PieEntry(t,"Transportation"));
-        entry.add(new PieEntry(e,"Entertainment"));
-        entry.add(new PieEntry(h,"Health"));
-        entry.add(new PieEntry(a,"Apparel"));
-        entry.add(new PieEntry(g,"Household"));
-        entry.add(new PieEntry(o,"Other"));
+        if(f>0){
+        entry.add(new PieEntry(f,"Food"));}
+        if(t>0){
+        entry.add(new PieEntry(t,"Transportation"));}
+        if(e>0){
+        entry.add(new PieEntry(e,"Entertainment"));}
+        if(h>0){
+        entry.add(new PieEntry(h,"Health"));}
+        if(a>0){
+        entry.add(new PieEntry(a,"Apparel"));}
+        if(g>0){
+        entry.add(new PieEntry(g,"Household"));}
+        if(o>0){
+        entry.add(new PieEntry(o,"Other"));}
 
-        PieDataSet set = new PieDataSet(entry, "Money Spent On");
+        PieDataSet set = new PieDataSet(entry, "");
         PieData data = new PieData(set);
         set.setSliceSpace(2);
         set.setValueTextSize(0);
-
 
         set.setColors(new int[]{R.color.expense,R.color.Green,R.color.Blue,R.color.purple,R.color.brown,R.color.orange,R.color.yellow});
         mPiechart.setData(data);
